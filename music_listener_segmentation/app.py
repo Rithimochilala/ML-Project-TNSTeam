@@ -1,5 +1,5 @@
 import joblib
-import numpy as np
+import pandas as pd
 
 # Load model and scaler
 model = joblib.load("model.pkl")
@@ -23,12 +23,12 @@ skip_rate = float(input("Skip rate: "))
 playlist_count = float(input("Playlist count: "))
 
 # Keep SAME order as training
-features = np.array([[
+features = pd.DataFrame([[
     listening_hours,
     songs_per_day,
     skip_rate,
     playlist_count
-]])
+]], columns=['listening_hours_per_week', 'songs_per_day', 'skip_rate', 'playlist_count'])
 
 # Scale the new input
 scaled_features = scaler.transform(features)
