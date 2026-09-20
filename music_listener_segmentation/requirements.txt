@@ -1,0 +1,33 @@
+ensure you have the following setup:
+
+python installed.
+necessary libraries:
+pandas
+scikit-learn
+joblib
+
+In VS CODE:
+
+check if python exists if you're unsure, if python not found please download it.
+
+In NEW Terminal:
+python --version
+
+and if yes, ensure you have the extensions installed in vscode:
+python by microsoft
+python debugger by microsoft
+
+Now proceed with downloading the libraries required for model.
+
+python -m pip install pandas scikit-learn joblib
+
+check if they all work properly:
+python -c "import pandas, sklearn, joblib; print('all good')"
+
+thats all we good to go.
+
+USE CASE:
+pandas - to load and handle the CSV as a table
+joblib - to save the trained model + scaler to disk
+scikit-learn — has StandardScaler (to scale numbers) and KMeans (the clustering algorithm).
+
